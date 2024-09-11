@@ -1,4 +1,5 @@
 import 'package:estudo_flutter/password/password_page.dart.dart';
+import 'currency/curreny_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -45,6 +46,17 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const PasswordPage()),
+              );
+            },
+          ),
+          _buildDrawerItem(
+            icon: Icons.currency_exchange,
+            text: 'Conversor de Moedas',
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CurrencyPage()),
               );
             },
           ),
