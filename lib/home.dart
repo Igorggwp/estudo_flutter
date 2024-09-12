@@ -1,4 +1,6 @@
 import 'package:estudo_flutter/password/password_page.dart.dart';
+import 'package:estudo_flutter/todo/cadastroTask.dart';
+import 'package:estudo_flutter/todo/listToTask.dart';
 import 'currency/curreny_page.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +38,28 @@ class HomePage extends StatelessWidget {
             text: 'Página Inicial',
             onTap: () {
               Navigator.pop(context);
+            },
+          ),
+          _buildDrawerItem(
+            icon: Icons.add_task_sharp,
+            text: 'Cadastro de Tarefas',
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CadastroTask()),
+              );
+            },
+          ),
+          _buildDrawerItem(
+            icon: Icons.list,
+            text: 'Lista de Tarefas',
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ListToTask()),
+              );
             },
           ),
           _buildDrawerItem(
