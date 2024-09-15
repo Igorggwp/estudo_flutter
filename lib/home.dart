@@ -1,3 +1,4 @@
+import 'package:estudo_flutter/cep/cep.dart';
 import 'package:estudo_flutter/password/password_page.dart.dart';
 import 'package:estudo_flutter/todo/cadastroTask.dart';
 import 'package:estudo_flutter/todo/listToTask.dart';
@@ -81,6 +82,17 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const CurrencyPage()),
+              );
+            },
+          ),
+          _buildDrawerItem(
+            icon: Icons.map,
+            text: 'Buscador de CEP',
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CepPage()),
               );
             },
           ),

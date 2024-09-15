@@ -30,7 +30,7 @@ class _CurrencyPageState extends State<CurrencyPage> {
       title: const Padding(
         padding: EdgeInsets.symmetric(vertical: 10.0),
         child: Text(
-          'Gerador de Senha',
+          'Conversor de Moedas',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
